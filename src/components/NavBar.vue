@@ -16,12 +16,16 @@
 export default {
 
 }
+
+
 </script>
 
 <style lang="sass" scoped>
 .navbar
   background: #eee
   display: flex
+  justify-content: space-around
+  flex-wrap: wrap
   position: fixed
   width: 100%
 
