@@ -3,7 +3,7 @@
     <section className="home__img__section">
       <div className="container">
         <h1>Привет!</h1>
-        <h2 class="test">проекты<span>.JS</span></h2>
+
         <p>Добро пожаловать на мой сайт-портфолио!</p>
       </div>
     </section>
@@ -27,9 +27,9 @@
     <section className="home__img__section">
       <div class="container bordered" data-aos="fade-in" data-aos-duration="1500">
         <h1>Заголовок</h1>
-        <img id="first_hex" alt="" class="hexagon__img " src=".././assets/hexa1.png" style="height: 25vh">
-        <img id="second_hex" alt="" class="hexagon__img " src=".././assets/hexa1.png" style="height: 25vh">
-        <img id="third_hex" alt="" class="hexagon__img " src=".././assets/hexa1.png" style="height: 25vh">
+        <img id="first_hex" alt="" class="hexagon__img " src=".././assets/1.png">
+        <img id="second_hex" alt="" class="hexagon__img " src=".././assets/2.png">
+        <img id="third_hex" alt="" class="hexagon__img " src=".././assets/3.png">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci blanditiis culpa cum dignissimos eaque
           hic libero modi nam nostrum officiis quod rerum ullam, ut vero voluptas voluptatibus. Error, molestias!</p>
 
@@ -67,120 +67,30 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.test
-  font-size: 80px
-  font-family: 'Roboto', sans-serif
-  font-weight: bold
-  background: linear-gradient(to right top, #00eaff, #f398ff, #00eaff)
-  background-size: cover
-  color: #fff
-  -webkit-text-fill-color: transparent
-  -webkit-background-clip: text
-  -moz-background-clip: text
 
-  span
-    background-size: cover
-    font-family: 'Roboto', sans-serif
-    font-weight: 800
-    color: #fff
-    -webkit-text-fill-color: transparent
-    -webkit-background-clip: text
-    -moz-background-clip: text
-    background-image: url(".././assets/water.jpg")
-
-.wrapper
-  height: 100vh
-  -ms-overflow-style: none
-  /* IE and Edge */
-  scrollbar-width: none
-
-  &::-webkit-scrollbar
-    display: none
-
-//scroll-snap-type: y mandatory
-//scroll-behavior: auto
-//scroll-snap-stop: always
-
-.container
-  max-width: 1140px
-  min-width: 70vw
-  min-height: 60vh
-  margin: 50px auto
-  background: #fff
-  display: flex
-  justify-content: center
-  flex-direction: column
-  align-items: center
-  text-align: center
-  padding: 50px
-  position: relative
-
-
-  h1
-    border-bottom: 2px solid #5051f9
-    min-width: 30vh
-    padding-bottom: 50px
-
-  .circle__img
-    position: absolute
-    z-index: -1
-    animation: inf-rotate infinite 30s linear
-    top: -30vh
-    right: 0
-    left: 0
 
 .bordered
   border: 10px solid transparent
   border-image: linear-gradient(to left top, #5051f9 20%, #00f7ff 30%, transparent 50%)
   border-image-slice: 1
 
-.triangles__img
-  position: absolute
-  top: 0
-  left: 0
-
-.first_hex:hover #second_hex
-  transform: rotate(- 180deg)
-
-
-.first_hex:hover
-  transform: rotate(- 180deg)
-
-.second_hex:hover
-  .container .hexagon__img
-    transform: rotate(- 180deg)
-
-.second_hex:hover
-  transform: rotate(- 180deg)
-
-.third_hex:hover ~ .hexagon__img
-  transform: rotate(- 180deg)
-
-.third_hex:hover
-  transform: rotate(- 180deg)
 
 .hexagon__img
   position: absolute
-  z-index: -1
+  height: 30vh
   top: 0
-  right: 100px
-  transition: all 1s ease-out
-
-  &:hover
-    transition: all 1s ease-out
-    transform: rotate(180deg)
 
   &:nth-child(2)
-    top: -30vh
+    top: -20vh
     left: 0
 
   &:nth-child(3)
-    top: -7vh
-    left: 0
+    top: 2.6vh
+    left: 13vh
 
   &:nth-child(4)
-    top: -18.5vh
-    left: 20vh
+    top: -20vh
+    left: 26vh
 
 
 .home__img__section
@@ -235,4 +145,6 @@ export default {
     width: 75vw
   100%
     width: 3vw
+
+
 </style>

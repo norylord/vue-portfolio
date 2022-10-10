@@ -1,9 +1,7 @@
 <template>
   <nav-bar/>
   <router-view v-slot="{ Component }">
-    <transition name="slide-fade">
-      <component :is="Component"/>
-    </transition>
+    <component :is="Component"/>
   </router-view>
 </template>
 
@@ -50,4 +48,51 @@ footer
   justify-content: center
   display: flex
 
+.container
+  max-width: 1140px
+  min-width: 70vw
+  min-height: 60vh
+  margin: 50px auto
+  background: #fff
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  text-align: center
+  padding: 50px
+  position: relative
+
+
+  h1
+    border-bottom: 2px solid #5051f9
+    min-width: 30vh
+    padding-bottom: 50px
+
+  .circle__img
+    position: absolute
+    z-index: -1
+    animation: inf-rotate infinite 30s linear
+    top: -30vh
+    right: 0
+    left: 0
+    left: 0
+
+.wrapper
+  height: 100vh
+  -ms-overflow-style: none
+  position: relative
+  /* IE and Edge */
+  animation: fade ease-in-out 0.5s
+
+
+  &::-webkit-scrollbar
+    display: none
+
+@keyframes fade
+  0%
+    left: .3%
+    opacity: 0
+  100%
+    left: 0
+    opacity: 1
 </style>
