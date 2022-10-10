@@ -4,8 +4,16 @@
       <h1>Norylord</h1>
     </div>
     <div class="navbar__items__section">
-      <div class="navbar__item">Главная</div>
-      <div class="navbar__item">Проекты</div>
+      <router-link to="/">
+        <div class="navbar__item">Главная</div>
+      </router-link>
+      <router-link to="/projects">
+        <div class="navbar__item">Проекты</div>
+      </router-link>
+
+
+      <!--      <div class="navbar__item" @click="$router.push('projects')">Проекты</div>-->
+
       <div class="navbar__item">GitHub</div>
       <div class="navbar__item">Telegram</div>
     </div>
@@ -13,9 +21,7 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 
 
 </script>
@@ -26,8 +32,8 @@ export default {
   display: flex
   justify-content: space-around
   flex-wrap: wrap
-  position: fixed
   width: 100%
+  color: #212121
 
   &__logo__section
     flex: 1 0 20%
@@ -43,7 +49,7 @@ export default {
   &__item
     font-weight: 600
     display: flex
-    padding: 20px
+    padding: 20px 10px
     align-items: center
     justify-content: center
     flex-basis: 20%
@@ -62,6 +68,7 @@ export default {
 
     &:hover
       cursor: pointer
+
       &:after
         width: 100%
         left: 0
