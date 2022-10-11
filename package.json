@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "axios": "^1.1.2",
     "core-js": "^3.8.3",
     "fullpage.js": "^4.0.11",
     "vue": "^3.2.13",

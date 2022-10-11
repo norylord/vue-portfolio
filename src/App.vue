@@ -3,6 +3,7 @@
   <router-view v-slot="{ Component }">
     <component :is="Component"/>
   </router-view>
+  <footer>@Norylord</footer>
 </template>
 
 <script>
@@ -47,6 +48,7 @@ footer
   align-items: center
   justify-content: center
   display: flex
+  position: relative
 
 .container
   max-width: 1140px
@@ -78,7 +80,6 @@ footer
     left: 0
 
 .wrapper
-  height: 100vh
   -ms-overflow-style: none
   position: relative
   /* IE and Edge */

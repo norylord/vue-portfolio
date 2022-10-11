@@ -4,16 +4,8 @@
       <h1>Norylord</h1>
     </div>
     <div class="navbar__items__section">
-      <router-link to="/">
-        <div class="navbar__item">Главная</div>
-      </router-link>
-      <router-link to="/projects">
-        <div class="navbar__item">Проекты</div>
-      </router-link>
-
-
-      <!--      <div class="navbar__item" @click="$router.push('projects')">Проекты</div>-->
-
+      <div class="navbar__item" @click="$router.push('/')">Главная</div>
+      <div class="navbar__item" @click="$router.push('/projects')">Проекты</div>
       <div class="navbar__item">GitHub</div>
       <div class="navbar__item">Telegram</div>
     </div>
