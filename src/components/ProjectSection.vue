@@ -52,6 +52,7 @@ export default {
   justify-content: center
   flex-direction: row
   flex-wrap: wrap
+  border-bottom: 1px solid lightgray
 
   .half__section
 
@@ -62,7 +63,7 @@ export default {
     justify-content: space-around
     align-items: center
 
-    border-bottom: 1px solid lightgray
+
     text-align: center
     padding: 60px
 

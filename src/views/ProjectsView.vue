@@ -63,7 +63,7 @@
           :project-key="projects[3].id"
           :short-desc="projects[3].shortDesc"
       >
-        <RickAndMortyCharacterCard/>
+        <ToDoList/>
       </ProjectSection>
 
       <!--    ToDo-->
@@ -154,9 +154,10 @@ import ProjectSection from "@/components/ProjectSection";
 import ProjectsInfo from "@/static/projectsInfo";
 import RickAndMortyCharacterCard from "@/components/RickAndMortyCharacterCard";
 import RaiderIOWindow from "@/components/RaiderIOWindow";
+import ToDoList from "@/components/toDo/ToDoList";
 
 export default {
-  components: {RaiderIOWindow, RickAndMortyCharacterCard, ProjectSection},
+  components: {ToDoList, RaiderIOWindow, RickAndMortyCharacterCard, ProjectSection},
   data() {
     return {
       projects: ProjectsInfo,

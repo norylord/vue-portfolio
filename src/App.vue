@@ -77,7 +77,6 @@ footer
     top: -30vh
     right: 0
     left: 0
-    left: 0
 
 .wrapper
   -ms-overflow-style: none
