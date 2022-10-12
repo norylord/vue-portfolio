@@ -26,7 +26,7 @@ export default [
 
     {
         id: 4,
-        name: 'ToDo List',
+        name: 'Just Do It !',
         framework: 'React.js',
         done: true,
         shortDesc: 'То, с чего начинают путь юные разработчики',

@@ -4,9 +4,12 @@
       <slot></slot>
     </div>
     <div class="half__section">
-      <h1>{{ name }}</h1>
-      <h3>{{ shortDesc }}</h3>
-      <h4>{{ desc }}</h4>
+      <div class="section__info">
+        <h1>{{ name }}</h1>
+        <h3>{{ shortDesc }}</h3>
+        <h4>{{ desc }}</h4>
+      </div>
+
     </div>
     <div v-if="projectKey % 2 === 1" class="half__section">
       <slot></slot>
@@ -48,24 +51,32 @@ export default {
 <style lang="sass" scoped>
 .project__section
   display: flex
-  min-height: 500px
   justify-content: center
   flex-direction: row
   flex-wrap: wrap
-  border-bottom: 1px solid lightgray
+  padding: 20px
 
   .half__section
 
-    flex: 1 0 50%
-    min-width: 500px
+    flex: 1 0 45vh
     display: flex
     flex-direction: column
     justify-content: space-around
     align-items: center
 
+    .section__info
+      display: flex
+      flex: 1 0 45vh
+      min-width: 500px
+      flex-direction: column
+      justify-content: space-around
+      align-items: center
+      background: rgba(255, 255, 255, 0.9)
+      box-shadow: 0 0 20px #2a2a2a
+      padding: 40px
 
     text-align: center
-    padding: 60px
+    padding: 20px
 
     h1
       font-weight: bold

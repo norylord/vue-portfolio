@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar">
+  <div id="navbar" class="navbar">
     <div class="navbar__logo__section">
       <h1>Norylord</h1>
     </div>
@@ -13,7 +13,23 @@
 </template>
 
 <script>
-export default {}
+
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
+
+export default {
+  mounted() {
+    window.onscroll = function () {
+      scrollFunction()
+    };
+  }
+}
 
 
 </script>

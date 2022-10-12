@@ -4,7 +4,12 @@
   >
     <h3 :class="['toDoItem__title', item.complete ? 'completed' : null]">{{ item.title }}</h3>
     <div v-show="toggle" class="btn__container">
-      <button class="btn success" @click.stop="completeItem(item.id)">Выполнено</button>
+      <button v-if="item.complete === true" class="btn unsuccess" @click.stop="toggleCompleteItem(item.id)">
+        Невыполнено
+      </button>
+      <button v-if="item.complete === false" class="btn success" @click.stop="toggleCompleteItem(item.id)">
+        Выполнено
+      </button>
       <button class="btn delete" @click.stop="removeItem(item.id)">Удалить</button>
     </div>
   </div>
@@ -29,6 +34,12 @@ export default {
       toggle: false,
     }
   },
+  methods: {
+    toggleCompleteItem(id) {
+      this.completeItem(id)
+      this.toggle = false
+    }
+  }
 }
 </script>
 
@@ -71,4 +82,9 @@ export default {
   .delete
     color: #eee
     background: lightcoral
+
+  .unsuccess
+    background: cornflowerblue
+    color: #eee
+
 </style>

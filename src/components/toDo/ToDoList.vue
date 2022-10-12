@@ -5,7 +5,7 @@
       <ToDoItem
           v-for="item in todos.sort(sortItems)"
           :key="item.id"
-          :completeItem="completeItem"
+          :completeItem="toggleCompleteItem"
           :item="item"
           :removeItem="removeItem"
           draggable="true"
@@ -85,9 +85,9 @@ export default {
     removeItem(id) {
       this.todos = this.todos.filter(i => i.id !== id)
     },
-    completeItem(id) {
+    toggleCompleteItem(id) {
       this.todos.map(i => {
-        i.id === id ? i.complete = true : false
+        i.id === id ? i.complete = !i.complete : null
       })
     }
   },
@@ -114,6 +114,8 @@ export default {
   align-items: center
   flex-direction: column
   width: 100%
+  background: #f1f1f1
+  border-radius: 15px
 
   input
     width: 80%
@@ -122,7 +124,7 @@ export default {
     display: flex
     flex-direction: column
     align-items: center
-    height: 40vh
+    height: 50vh
     width: 100%
     overflow-y: auto
 
