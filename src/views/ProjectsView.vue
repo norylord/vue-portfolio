@@ -1,5 +1,7 @@
 <template>
+
   <div class="wrapper">
+
     <section class="bg_section">
 
       <h2 class="title">проекты<span>.JS</span></h2>
@@ -173,6 +175,7 @@ import ProjectsInfo from "@/static/projectsInfo";
 import RickAndMortyCharacterCard from "@/components/RickAndMortyCharacterCard";
 import RaiderIOWindow from "@/components/RaiderIOWindow";
 import ToDoList from "@/components/toDo/ToDoList";
+
 
 export default {
 

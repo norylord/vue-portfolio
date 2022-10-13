@@ -1,16 +1,17 @@
 <template>
+  <nav-bar/>
   <router-view v-slot="{ Component }">
     <component :is="Component"/>
   </router-view>
 </template>
 
 <script>
+
+
 import NavBar from "@/components/NavBar";
 
 export default {
   components: {NavBar}
-
-
 }
 </script>
 
@@ -20,7 +21,7 @@ export default {
   margin: 0
   padding: 0
   box-sizing: border-box
-  font-family: 'Roboto Thin', sans-serif
+  font-family: 'Monserrat', sans-serif
   text-decoration: none
 
 body::-webkit-scrollbar

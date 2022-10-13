@@ -59,7 +59,7 @@ export default {
     }
   },
   mounted() {
-    this.initAOS()
+    //this.initAOS()
   }
 
 
@@ -94,7 +94,7 @@ export default {
 
 
 .home__img__section
-  min-height: 90vh
+  min-height: 100vh
   display: flex
   justify-content: center
   align-items: center

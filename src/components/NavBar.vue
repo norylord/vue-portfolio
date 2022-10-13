@@ -15,33 +15,21 @@
 <script>
 
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-50px";
-  }
-}
-
-export default {
-  mounted() {
-    window.onscroll = function () {
-      scrollFunction()
-    };
-  }
-}
+export default {}
 
 
 </script>
 
 <style lang="sass" scoped>
 .navbar
-  background: #eee
+  background: transparent
   display: flex
   justify-content: space-around
+  position: absolute
   flex-wrap: wrap
   width: 100%
-  color: #212121
+  color: #eee
+  z-index: 100
 
   &__logo__section
     flex: 1 0 20%
