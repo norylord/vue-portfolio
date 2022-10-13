@@ -52,8 +52,9 @@ export default {
   display: flex
   flex-flow: column nowrap
   background: linear-gradient(to right bottom, #212121, #103f2e, #212121)
+
   color: #eee
-  box-shadow: 0 0 20px #2a2a2a
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5)
   border-radius: 20px
   text-align: start
   word-break: break-word
@@ -63,6 +64,7 @@ export default {
   &:hover
     transform: scale(1.02)
     transition: all 0.2s linear
+    box-shadow: 0 0 50px rgba(193, 244, 113, 0.5)
 
   .status__icon
     height: 15px

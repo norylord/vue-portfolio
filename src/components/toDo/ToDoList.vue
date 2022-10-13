@@ -1,6 +1,7 @@
 <template>
   <div class="todoList">
     <custom-input v-model="newItemTitle" placeholder="Введите задачу..." @keydown.enter="createNewItem"/>
+    <h1>Tasks</h1>
     <div class="todoList__container">
       <ToDoItem
           v-for="item in todos.sort(sortItems)"
@@ -11,8 +12,9 @@
           draggable="true"
           @dragstart="dragStartHandler(item)"
           @drop="dropHandler($event, item)"
-          @dragover.prevent
+          @dragover.prevent.stop="dragOverHandler"
           @dragenter.prevent
+          @dragleave.prevent.stop="dragLeaveHandler"
       />
     </div>
   </div>
@@ -60,7 +62,6 @@ export default {
       }
     },
     dragStartHandler(item) {
-      console.log(item)
       this.currentItem = item
     },
     dropHandler(e, item) {
@@ -114,9 +115,10 @@ export default {
   align-items: center
   flex-direction: column
   width: 100%
-  background: #f1f1f1
+  background: #fff
+  box-shadow: 0 0 20px #212121
   border-radius: 15px
-
+  color: #212121
   input
     width: 80%
 
@@ -124,17 +126,19 @@ export default {
     display: flex
     flex-direction: column
     align-items: center
-    height: 50vh
+    height: 40vh
     width: 100%
     overflow-y: auto
+
 
 
     &::-webkit-scrollbar
       width: 10px
 
+
     &::-webkit-scrollbar-track
-      background: lightgray
+      background: #212121
 
     &::-webkit-scrollbar-thumb
-      background: linear-gradient(#49e8e4, #f1354d)
+      background: #424242
 </style>

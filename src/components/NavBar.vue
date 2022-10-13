@@ -22,7 +22,6 @@ export default {}
 
 <style lang="sass" scoped>
 .navbar
-  background: transparent
   display: flex
   justify-content: space-around
   position: absolute
@@ -30,6 +29,7 @@ export default {}
   width: 100%
   color: #eee
   z-index: 100
+  background: rgba(10,10,10, 0.3)
 
   &__logo__section
     flex: 1 0 20%

@@ -82,7 +82,6 @@ footer
   height: 100vh
   overflow-y: auto
   scroll-snap-type: y mandatory
-  scroll-snap-stop: always
   position: relative
   /* IE and Edge */
   animation: fade ease-in-out 0.5s

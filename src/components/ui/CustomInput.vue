@@ -18,16 +18,21 @@ export default {
 
 <style lang="sass" scoped>
 .input
-  padding: 10px 15px
+  padding: 10px 40px
   margin: 20px 0
   outline: none
   border: 0
-  border-bottom: 2px solid gray
-  background: transparent
+  text-align: center
+  font-weight: 300
+  background: #1D2939
+  border-radius: 100px
+  color: #eee
   font-size: 20px
+
+  &::placeholder
+    color: rgba(238, 238, 238, 0.72)
 
 
   &:focus
-    border-bottom: 2px solid #42b983
     transition: border-bottom-color 0.3s ease-in-out
 </style>
