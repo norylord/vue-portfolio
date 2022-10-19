@@ -16,12 +16,12 @@ export default {
 </script>
 
 <style lang="sass">
-@import "styles/Normalize.css"
+
 *
   margin: 0
   padding: 0
   box-sizing: border-box
-  font-family: 'Monserrat', sans-serif
+  font-family: 'Open Sans', sans-serif
   text-decoration: none
 
 body::-webkit-scrollbar

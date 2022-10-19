@@ -1,7 +1,7 @@
 <template>
   <div class="todoList">
-    <custom-input v-model="newItemTitle" placeholder="Введите задачу..." @keydown.enter="createNewItem"/>
-    <h1>Tasks</h1>
+    <h1 class="todoList__title">Задачи</h1>
+
     <div class="todoList__container">
       <ToDoItem
           v-for="item in todos.sort(sortItems)"
@@ -17,6 +17,10 @@
           @dragleave.prevent.stop="dragLeaveHandler"
       />
     </div>
+    <custom-input v-model="newItemTitle" placeholder="Введите задачу..." @keydown.enter="createNewItem"/>
+    <button class="btn__add" @click="createNewItem">
+      <img alt="" src="@/assets/plus.png">
+    </button>
   </div>
 </template>
 
@@ -113,23 +117,32 @@ export default {
 .todoList
   display: flex
   align-items: center
+  justify-content: space-between
   flex-direction: column
-  width: 100%
+  width: 90%
   background: #fff
   box-shadow: 0 0 20px #212121
   border-radius: 15px
+  padding: 40px 40px 20px
   color: #212121
+
+  &__title
+    font-size: 35px
+    display: flex
+    margin-top: 0
+    margin-bottom: 30px
+    align-items: center
+
   input
-    width: 80%
+    width: 100%
 
   &__container
     display: flex
     flex-direction: column
     align-items: center
-    height: 40vh
     width: 100%
+    height: 25vh
     overflow-y: auto
-
 
 
     &::-webkit-scrollbar
@@ -137,8 +150,30 @@ export default {
 
 
     &::-webkit-scrollbar-track
-      background: #212121
+      background: #fff
 
     &::-webkit-scrollbar-thumb
-      background: #424242
+      border-radius: 5px
+      background: #1D2939
+
+.btn__add
+  width: 50px
+  height: 50px
+  border-radius: 50%
+  background: #1D2939
+  transition: .3s all
+  border: 0.1px solid #1D2939
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+
+  img
+    transition: .3s ease-in-out all
+
+  &:hover
+
+    img
+      transition: .3s ease-in-out
+      transform: scale(1.3)
 </style>

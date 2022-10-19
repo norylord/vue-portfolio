@@ -19,18 +19,18 @@ export default {
 <style lang="sass" scoped>
 .input
   padding: 10px 40px
-  margin: 20px 0
+  margin: 5px 0
   outline: none
   border: 0
   text-align: center
   font-weight: 300
-  background: #1D2939
+  background: transparent
   border-radius: 100px
-  color: #eee
+  color: #212121
   font-size: 20px
 
   &::placeholder
-    color: rgba(238, 238, 238, 0.72)
+    color: #a1a1a1
 
 
   &:focus

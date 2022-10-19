@@ -17,13 +17,13 @@
 
         <ProjectSection
             :key="projects[0].name"
+            :bg-desc-color="'red'"
             :desc="projects[0].desc"
             :done="projects[0].done"
             :framework="projects[0].framework"
             :name="projects[0].name"
             :project-key="projects[0].id"
             :short-desc="projects[0].shortDesc"
-            :bg-desc-color="'red'"
         >
         </ProjectSection>
       </div>
@@ -32,19 +32,21 @@
 
       <section class="bg_section">
 
+        <div class="content">
+          <ProjectSection
+              :key="projects[1].name"
+              :bg-desc-color="'blue'"
+              :desc="projects[1].desc"
+              :done="projects[1].done"
+              :framework="projects[1].framework"
+              :name="projects[1].name"
+              :project-key="projects[1].id"
+              :short-desc="projects[1].shortDesc"
+          >
+            <RaiderIOWindow/>
+          </ProjectSection>
+        </div>
 
-        <ProjectSection
-            :key="projects[1].name"
-            :desc="projects[1].desc"
-            :done="projects[1].done"
-            :framework="projects[1].framework"
-            :name="projects[1].name"
-            :project-key="projects[1].id"
-            :short-desc="projects[1].shortDesc"
-            :bg-desc-color="'blue'"
-        >
-          <RaiderIOWindow/>
-        </ProjectSection>
       </section>
 
       <!--    Rick And Morty-->
@@ -52,13 +54,13 @@
       <section class="bg_section">
         <ProjectSection
             :key="projects[2].name"
+            :bg-desc-color="'green'"
             :desc="projects[2].desc"
             :done="projects[2].done"
             :framework="projects[2].framework"
             :name="projects[2].name"
             :project-key="projects[2].id"
             :short-desc="projects[2].shortDesc"
-            :bg-desc-color="'green'"
         >
           <RickAndMortyCharacterCard/>
         </ProjectSection>
@@ -69,13 +71,13 @@
         <!--    Rick And Morty-->
         <ProjectSection
             :key="projects[3].name"
+            :bg-desc-color="'yellow'"
             :desc="projects[3].desc"
             :done="projects[3].done"
             :framework="projects[3].framework"
             :name="projects[3].name"
             :project-key="projects[3].id"
             :short-desc="projects[3].shortDesc"
-            :bg-desc-color="'yellow'"
         >
           <ToDoList/>
         </ProjectSection>
@@ -86,13 +88,13 @@
 
         <ProjectSection
             :key="projects[4].name"
+            :bg-desc-color="'cyan'"
             :desc="projects[4].desc"
             :done="projects[4].done"
             :framework="projects[4].framework"
             :name="projects[4].name"
             :project-key="projects[4].id"
             :short-desc="projects[4].shortDesc"
-            :bg-desc-color="'cyan'"
         >
           <RickAndMortyCharacterCard/>
         </ProjectSection>
@@ -104,13 +106,13 @@
 
         <ProjectSection
             :key="projects[5].name"
+            :bg-desc-color="'teal'"
             :desc="projects[5].desc"
             :done="projects[5].done"
             :framework="projects[5].framework"
             :name="projects[5].name"
             :project-key="projects[5].id"
             :short-desc="projects[5].shortDesc"
-            :bg-desc-color="'teal'"
         >
           <RickAndMortyCharacterCard/>
         </ProjectSection>
@@ -122,13 +124,13 @@
 
         <ProjectSection
             :key="projects[6].name"
+            :bg-desc-color="'linear-gradient(red, blue)'"
             :desc="projects[6].desc"
             :done="projects[6].done"
             :framework="projects[6].framework"
             :name="projects[6].name"
             :project-key="projects[6].id"
             :short-desc="projects[6].shortDesc"
-            :bg-desc-color="'linear-gradient(red, blue)'"
         >
           <RickAndMortyCharacterCard/>
         </ProjectSection>
@@ -141,13 +143,13 @@
 
         <ProjectSection
             :key="projects[7].name"
+            :bg-desc-color="'violet'"
             :desc="projects[7].desc"
             :done="projects[7].done"
             :framework="projects[7].framework"
             :name="projects[7].name"
             :project-key="projects[7].id"
             :short-desc="projects[7].shortDesc"
-            :bg-desc-color="'violet'"
         >
           <RickAndMortyCharacterCard/>
         </ProjectSection>
@@ -158,13 +160,13 @@
       <section class="bg_section">
         <ProjectSection
             :key="projects[8].name"
+            :bg-desc-color="'linear-gradient(green, orange)'"
             :desc="projects[8].desc"
             :done="projects[8].done"
             :framework="projects[8].framework"
             :name="projects[8].name"
             :project-key="projects[8].id"
             :short-desc="projects[8].shortDesc"
-            :bg-desc-color="'linear-gradient(green, orange)'"
         >
           <RickAndMortyCharacterCard/>
         </ProjectSection>
@@ -239,7 +241,6 @@ export default {
 
   &:nth-child(9)
     background-image: url("https://www.egeniq.nl/sites/default/files/2020-06/frontend_webdeveloper.jpg")
-
 
 
   .title

@@ -29,7 +29,7 @@ export default {}
   width: 100%
   color: #eee
   z-index: 100
-  background: rgba(10,10,10, 0.3)
+  background: #1d2939
 
   &__logo__section
     flex: 1 0 20%

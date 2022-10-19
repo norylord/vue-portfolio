@@ -1,22 +1,26 @@
 <template>
 
   <div class="toDoItem"
-       @click="toggle = !toggle"
+
   >
     <div class="title__container">
-        <input type='checkbox' value={value} id={id} name={name} onChange={onChange}/>
-      <h2 :class="['toDoItem__title', item.complete ? 'completed' : null]">{{ item.title }}</h2>
+      <button :class="[item.complete ? 'completed' : null, 'btn_complete']" @click="toggleCompleteItem(item.id)">
+        <img v-if="item.complete " alt="" src="@/assets/check.png" style="width: 23px; height: 23px">
+      </button>
+      <h2 :class="['toDoItem__title']" :style="item.complete  ? 'text-decoration: line-through' : null">{{
+          item.title
+        }}</h2>
     </div>
 
     <div class="btn__container">
-<!--      <button v-if="item.complete === true" class="btn unsuccess" @click.stop="toggleCompleteItem(item.id)">-->
-<!--        Невыполнено-->
-<!--      </button>-->
-<!--      <button v-if="item.complete === false" class="btn success" @click.stop="toggleCompleteItem(item.id)">-->
-<!--        Выполнено-->
-<!--      </button>-->
+      <!--      <button v-if="item.complete === true" class="btn unsuccess" @click.stop="toggleCompleteItem(item.id)">-->
+      <!--        Невыполнено-->
+      <!--      </button>-->
+      <!--      <button v-if="item.complete === false" class="btn success" @click.stop="toggleCompleteItem(item.id)">-->
+      <!--        Выполнено-->
+      <!--      </button>-->
 
-      <button class="btn delete" @click.stop="removeItem(item.id)">Remove</button>
+      <button class="btn delete" @click.stop="removeItem(item.id)">Удалить</button>
     </div>
   </div>
 </template>
@@ -56,13 +60,12 @@ export default {
   text-align: center
   position: relative
   flex-flow: row wrap
-  width: 80%
-  padding: 20px 40px
-  border-radius: 100px
-  margin: 15px 0
-  background: rgba(29, 41, 57, 0.05)
+  width: 95%
+  padding: 5px 10px
+  border-radius: 10px
+  margin: 5px
+  background: rgba(29, 41, 57, 0.1)
   cursor: pointer
-
 
 
   &__title
@@ -94,6 +97,12 @@ export default {
   .delete
     color: #eee
     background: #1D2939
+    letter-spacing: 0.5px
+    transition: .3s ease-in-out all
+
+    &:hover
+      transition: .3s ease-in-out all
+      background: #740b0b
 
   .unsuccess
     background: cornflowerblue
@@ -103,14 +112,29 @@ export default {
   display: flex
   align-items: center
 
+.btn_complete
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  background: transparent
+  transition: .3s all
+  margin: 10px
+  border: 0.1px solid #1D2939
+
+.completed
+  transition: .3s all
+  background: #1D2939
+
 input[type='checkbox']
   margin: 0 10px
   width: 25px
   background: rgba(29, 41, 57, 0.1)
   border-radius: 50%
   height: 25px
+
   &:checked
     accent-color: #1D2939
+
   &:checked + h2
     text-decoration: line-through
 
